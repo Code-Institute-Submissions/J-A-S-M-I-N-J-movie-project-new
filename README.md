@@ -113,7 +113,7 @@
   - From the source section drop-down menu, select the Main branch. 
   - Once the main branch has been selected, the page provided the link to the completed website. 
   
-- The live link could be found here: [Coolest Movie Quiz](https://j-a-s-m-i-n-j.github.io/movie-project/).
+- The live link could be found here: [Coolest Movie Quiz](https://j-a-s-m-i-n-j.github.io/movie-project-new/).
 
 ## Credits
 ---
