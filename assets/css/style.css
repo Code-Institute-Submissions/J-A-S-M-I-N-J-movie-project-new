@@ -1,0 +1,691 @@
+/*   Font-family & Styling to keep the footer at the bottom   */
+
+body {
+    background-color: #f3e6e6;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Trirong", serif;
+    line-height: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*   Also help footer stay below */
+html,
+body,
+div,
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+#header {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
+.heading {
+    font-size: 1.25rem;
+    text-align: center;
+
+}
+
+/*   Makes so that game-area stays centered    */
+.full-game-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*   Keeps the image in place and gives it size until media queries  */
+img {
+    margin-top: 40px;
+    display: flex;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    width: 560px;
+    height: 380px;
+}
+
+.img-area {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 560px;
+    height: 380px;
+    background-color: #020101;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/*   Styling for the game questions     */
+.game-question {
+
+    margin-top: 40px;
+    text-align: center;
+    width: 500px;
+    word-wrap: break-word;
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+    background-color: #f3e6e6;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    padding-top: 7.5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: large;
+}
+
+/*   Keeps buttons spaced and in a row  */
+.game-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+/*     Button style          */
+.btn {
+    height: 65px;
+    width: 140px;
+    box-shadow: 0 0 0 2px #f3e6e6;
+    border-radius: 10px;
+    background-color: #f3e6e6;
+}
+
+/*   Keeps timer and score in a row and spaced     */
+.dynamic-tracking-objects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.static-tracking-objects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 30px;
+    padding-top: 5px;
+}
+
+/*   Individual styling for timer            */
+#game-timer {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f3e6e6;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*    Individual styling for score           */
+#game-score {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f3e6e6;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*    Ind. styling for text below timer           */
+#timer-text {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f3e6e6;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*    Ind. styling for text below score           */
+#score-text {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f3e6e6;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*   Creates the popup-style, gives it a box, keeps in the center      */
+#popup {
+    display: none;
+    background-color: #f3e6e6;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 560px;
+    height: 680px;
+    box-shadow: -3px -3px 7px #fffdfdcc, 3px 3px 5px rgba(15, 17, 19, 0.342);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+form {
+    text-align: center;
+}
+
+/*   Styles the name-input for the form            */
+#playerName {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: #f3e6e6;
+}
+
+/*    Styles the email-input for the form           */
+#email-adress {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    width: 160px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: #f3e6e6;
+}
+
+/*   Score display in the popup            */
+#final-score-text {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*   Score display in the popup            */
+#final-score {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*  Header for the rules at the bottom             */
+#game-rules-header {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*  Style for the rules at the bottom             */
+#game-rules {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/*   Style for submit button, has a border, cursor animation, removes text-deco from being a link            */
+#submit {
+    display: block;
+    width: 120px;
+    height: 25px;
+    background-color: #f3e6e6;
+    box-shadow: -3px -3px 7px #fffdfdcc, 3px 3px 5px rgba(10, 12, 15, 0.342);
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-decoration: none;
+    color: black;
+
+}
+
+/*  Hover animation for button         */
+#submit:hover {
+    background-color: white;
+}
+
+/*  Click animation for button             */
+#submit:focus {
+    background-color: #f3e6e6;
+}
+
+/*   Smallest media query            */
+
+@media only screen and (min-width: 319px) and (max-width: 349px) {
+    img {
+        width: 240px;
+        height: 240px;
+        margin-top: 2px;
+        margin-bottom: 6px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .full-game-area {
+        width: 100%;
+    }
+
+    .btn {
+        height: 50px;
+        width: 85px;
+        font-size: 10px;
+    }
+
+    .buttonstyling-2 {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .game-question {
+        width: 260px;
+        font-size: 10px;
+        margin-top: 5px;
+        height: 40px;
+    }
+
+    .game-buttons {
+        justify-content: space-evenly;
+        margin-top: 2px;
+        margin-bottom: 20px;
+
+    }
+
+    #game-rules-header {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    #game-rules {
+        font-size: 11px;
+    }
+
+    #game-timer {
+        font-size: 12px;
+
+    }
+
+    #game-score {
+        font-size: 12px;
+
+    }
+
+    #timer-text {
+        font-size: 12px;
+
+    }
+
+    #score-text {
+        font-size: 12px;
+
+    }
+
+    .static-tracking-objects {
+        justify-content: space-around;
+        margin-top: 2px;
+        margin-bottom: 10px;
+
+
+    }
+
+    .dynamic-tracking-objects {
+        justify-content: space-around;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .image-area {
+        width: 300px;
+        height: 240px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #popup {
+        width: 310px;
+        height: 520px;
+        top: 30%;
+    }
+
+    footer {
+        font-size: 11px;
+    }
+
+    #submit {
+        margin-top: 20px;
+    }
+
+    #playerName {
+        margin-top: 10px;
+    }
+
+    #email-adress {
+        margin-top: 0px;
+    }
+}
+
+
+@media only screen and (min-width: 350px) and (max-width: 499px) {
+    .full-game-area {
+        width: 87.5%;
+    }
+
+    .btn {
+        height: 50px;
+        width: 85px;
+        font-size: 10px;
+    }
+
+    .buttonstyling-2 {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .game-question {
+        width: 260px;
+        font-size: 10px;
+        margin-top: 5px;
+        height: 40px;
+    }
+
+    .game-buttons {
+        justify-content: space-evenly;
+        margin-top: 2px;
+        margin-bottom: 20px;
+
+    }
+
+    #game-rules-header {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    #game-rules {
+        font-size: 11px;
+    }
+
+    #game-timer {
+        font-size: 12px;
+
+    }
+
+    #game-score {
+        font-size: 12px;
+
+    }
+
+    #timer-text {
+        font-size: 12px;
+
+    }
+
+    #score-text {
+        font-size: 12px;
+
+    }
+
+    .static-tracking-objects {
+        justify-content: space-around;
+        margin-top: 2px;
+        margin-bottom: 10px;
+
+
+    }
+
+    .dynamic-tracking-objects {
+        justify-content: space-around;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    img {
+        width: 300px;
+        height: 240px;
+        margin-top: 2px;
+        margin-bottom: 6px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image-area {
+        width: 300px;
+        height: 240px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #popup {
+        width: 310px;
+        height: 520px;
+        top: 30%;
+    }
+
+    footer {
+        font-size: 11px;
+    }
+
+    #submit {
+        margin-top: 20px;
+    }
+
+    #playerName {
+        margin-top: 10px;
+    }
+
+    #email-adress {
+        margin-top: 0px;
+    }
+}
+
+/*   medium media query            */
+@media only screen and (min-width: 500px) and (max-width: 619px) {
+
+    img {
+        width: 400px;
+        height: 340px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .game-question {
+        width: 340px;
+        font-size: 13px;
+        margin-top: 5px;
+        height: 50px;
+    }
+
+    #game-timer {
+        font-size: 13px;
+
+    }
+
+    #game-score {
+        font-size: 13px;
+
+    }
+
+    #timer-text {
+        font-size: 13px;
+
+    }
+
+    #score-text {
+        font-size: 13px;
+    }
+
+    .static-tracking-objects {
+        justify-content: space-around;
+        margin-top: 2px;
+        margin-bottom: 5px;
+    }
+
+    .dynamic-tracking-objects {
+        justify-content: space-around;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        height: 50px;
+        width: 90px;
+        font-size: 12px;
+    }
+
+    .game-buttons {
+        margin-top: 5px;
+    }
+
+    #game-rules-header {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    #game-rules {
+        font-size: 12px;
+    }
+
+    #popup {
+        width: 420px;
+        height: 560px;
+        top: 40%;
+    }
+
+    #submit {
+        margin-top: 20px;
+    }
+
+    #playerName {
+        margin-top: 15px;
+    }
+
+    #email-adress {
+        margin-top: 0px;
+    }
+}
+
+/*  Last media query needed, since page was responsive from 780px+ from the start             */
+@media only screen and (min-width: 620px) and (max-width: 780px) {
+
+    .full-game-area {
+        width: 90%;
+    }
+
+    .btn {
+        height: 45px;
+        width: 120px;
+        font-size: 11px;
+    }
+
+    .game-question {
+        width: 380px;
+        font-size: 15px;
+    }
+
+    .game-buttons {
+        justify-content: center;
+    }
+
+    .buttonstyling-2 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #game-timer {
+        font-size: 16px;
+    }
+
+    #game-score {
+        font-size: 16px;
+    }
+
+    #timer-text {
+        font-size: 16px;
+    }
+
+    #score-text {
+        font-size: 16px;
+
+    }
+
+    .static-tracking-objects {
+        justify-content: space-around;
+    }
+
+    .dynamic-tracking-objects {
+        justify-content: space-around;
+    }
+
+    #popup {
+        width: 460px;
+        height: 580px;
+        top: 45%;
+    }
+
+    .game-question {
+        height: 60px;
+    }
+
+    #submit {
+        margin-top: 30px;
+    }
+
+    #playerName {
+        margin-top: 20px;
+    }
+
+    #email-adress {
+        margin-top: 0px;
+    }
+}

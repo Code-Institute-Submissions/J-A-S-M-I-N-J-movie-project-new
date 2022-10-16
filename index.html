@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <meta name="description" content="Coolest Movie Quiz, A cool movie quiz by someone that watches a lot of them">
+    <meta name="keywords" content="Movies, Quiz, Cinema, Game, Actors, Fun, Directing">
+    <title>Movie Quiz Fanatics</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+</head>
+
+<body>
+    <header id="header" class="heading">
+        <h1>Coolest Movie Quiz</h1>
+    </header>
+    <!--  The whole game area that includes all relevant elements to the game   -->
+    <div class="full-game-area">
+        <!--  This is where the questions are generated   -->
+        <div class="question-area">
+            <div class="game-question">Blade, also known as?</div>
+        </div>
+        <!--  An image that will load for each question     -->
+        <div class="image-area">
+            <img class="game-images" src="./assets/images/img-question-0.jpeg"
+                alt="1 of 20 quiz images related to quiz-question">
+        </div>
+        <!--  The game buttons that make the game advance forward    -->
+        <div class="game-buttons">
+            <!-- from left to right-->
+            <button data-type="game-button-1" class="btn">The Daywalker</button>
+            <button data-type="game-button-2" class="btn buttonstyling-2">The Nightslayer</button>
+            <button data-type="game-button-3" class="btn">The Vampire Hunter</button>
+        </div>
+        <!--  The game timer that will count down from 60 seconds and also the score-tracker   -->
+        <div class="dynamic-tracking-objects">
+            <div id="game-timer">00:00</div>
+            <div id="game-score">0</div>
+        </div>
+        <!--  Static text that gives ^ above more context for players     -->
+        <div class="static-tracking-objects">
+            <div id="timer-text">Time Left</div>
+            <div id="score-text">Score</div>
+        </div>
+    </div>
+    <!--  The end-of-game popup that has a form built in    -->
+    <div id="popup">
+        <form action="." id="form" method="post" name="form">
+            <h2>Submit Your Score!</h2>
+            <hr>
+            <!--  Shows the players final score      -->
+            <div id="final-score-text">Final Score</div>
+            <div id="final-score">
+                <p>0</p>
+            </div>
+            <!--  Name and Email Field + Submit button      -->
+            <input id="playerName" name="player-name" placeholder="Name" type="text" required>
+            <br>
+            <input id="email-adress" type="email" name="email-adress" placeholder="something@gmail.com" minlength="10"
+                maxlength="40" required>
+            <input class="submit-button" id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+    <!--  These elements explain the game rules     -->
+    <div id="game-rules-header">
+        <h4>Game Rules</h4>
+    </div>
+    <div id="game-rules">
+        <p> You have 60 seconds to answer as many questions as possible.</p>
+        <p> Each correct answer is worth 1 point.</p>
+        <p> Wrong answers award no points and no deduction.</p>
+        <p> You can only answer each question once.</p>
+    </div>
+    <!--  Footer      -->
+    <footer class="page-footer">@the photos on this page are stock/images licensed for creative use.</footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init('UWAWEmoF096jTsSFm');
+        })();
+    </script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
